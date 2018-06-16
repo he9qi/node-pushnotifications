@@ -67,6 +67,12 @@ class PN {
         this.apn = new APN(this.settings.apn);
     }
 
+    shutdown() {
+      if (this.apn) {
+          this.apn.shutdown();
+      }
+    }
+
     sendWith(method, regIds, data, cb) {
         return method(regIds, data, this.settings)
             .then((results) => {
