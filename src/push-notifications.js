@@ -68,9 +68,9 @@ class PN {
     }
 
     shutdown() {
-      if (this.apn) {
-          this.apn.shutdown();
-      }
+        if (this.apn) {
+            this.apn.shutdown();
+        }
     }
 
     sendWith(method, regIds, data, cb) {
